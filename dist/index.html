@@ -1,55 +1,52 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    
-  <!--  <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="shortcut icon" type="image/svg+xml" href="/icon-1.png" />
-    <title>Tempcover</title>
-  -->
-    
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tempcover</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tempcover</title>
 
-    <!-- Meta tags for iOS web app -->
-    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Tempcover">
+  <!-- Meta tags for iOS web app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Tempcover">
 
-    <!-- Link to the app icon -->
-    <link rel="apple-touch-icon" href="/icon-1.png">
-    <link rel="manifest" href="/manifest.json">
-    <style>
-      html, body {
-    overflow: hidden;
-    height: 100%;
-    margin: 0;
-}
-    </style>
-    
-    
-    <script type="module" crossorigin src="/assets/index-CeQAZJzV.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CRFd_EZK.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-    
-    
-    <script>
-      if ('serviceWorker' in navigator) {
-          window.addEventListener('load', function() {
-              navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                  console.log('Service Worker registered with scope:', registration.scope);
-              }, function(err) {
-                  console.log('Service Worker registration failed:', err);
-              });
-          });
-      }
+  <!-- Link to the app icon -->
+  <link rel="apple-touch-icon" href="/icon-1.png">
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #root {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-BKvF_AQM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BEeNIvHe.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                console.log('Service Worker registered with scope:', registration.scope);
+            }, function(err) {
+                console.log('Service Worker registration failed:', err);
+            });
+        });
+    }
   </script>
-  </body>
+</body>
 </html>
