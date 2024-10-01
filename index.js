@@ -198,7 +198,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 // Delete User Endpoint
-app.delete('/users/:id', async (req, res) => {
+app.delete('/users1/:id', async (req, res) => {
   try {
     const userId = req.params.id;
     await User.findByIdAndDelete(userId);
