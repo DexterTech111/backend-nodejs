@@ -97,7 +97,7 @@ app.post('/check-pin', async (req, res) => {
 
 
 
-app.get('/user', async (req, res) => {
+app.get('/users', async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).send(users);
@@ -109,7 +109,7 @@ app.get('/user', async (req, res) => {
 
 
 // New route to update user status
-app.patch('/users/:id/status', async (req, res) => {
+app.patch('/user-status/:id/status', async (req, res) => {
   const { id } = req.params;
   const { isActive } = req.body; // Get the new status from the request body
 
@@ -198,7 +198,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 // Delete User Endpoint
-app.delete('/users1/:id', async (req, res) => {
+app.delete('/user-delete/:id', async (req, res) => {
   try {
     const userId = req.params.id;
     await User.findByIdAndDelete(userId);
@@ -210,6 +210,8 @@ app.delete('/users1/:id', async (req, res) => {
 });
 ////
 ////
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Serve static files from the "client/dist" directory
 app.use(express.static(path.join(__dirname, 'dist')));
