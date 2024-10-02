@@ -97,7 +97,7 @@ app.post('/check-pin', async (req, res) => {
 
 
 
-app.get('/users', async (req, res) => {
+app.get('/users-list', async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).send(users);
