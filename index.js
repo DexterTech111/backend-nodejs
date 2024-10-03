@@ -47,7 +47,7 @@ const User = mongoose.model('User', userSchema);
 
 app.post('/create-user', async (req, res) => {
   try {
-    const generateRegNumber = () => {
+   /* const generateRegNumber = () => {
       const randomNumbers = Math.floor(10000000 + Math.random() * 90000000).toString();
       return `TVC-MOT-${randomNumbers}`;
     };
@@ -55,8 +55,10 @@ app.post('/create-user', async (req, res) => {
     const user = new User({
       ...req.body,
       regNumber: generateRegNumber(),
+    });*/
+    const user = new User({
+      ...req.body,
     });
-
     await user.save();
     res.status(201).send({ message: 'User created successfully' });
   } catch (error) {
